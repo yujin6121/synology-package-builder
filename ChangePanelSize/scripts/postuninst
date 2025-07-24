@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# 심볼릭 링크 제거
-rm -f /usr/syno/synoman/webman/3rdparty/Changepanelsize
+# Remove symlink
+rm -f "/usr/syno/synoman/webman/3rdparty/StoragePanelManager"
+
+# Optional: Ask user if they want to restore original configuration
+# (This would require more complex interaction handling)
+
+echo "Storage Panel Manager removed successfully"
 
 exit 0
-

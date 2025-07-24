@@ -1,14 +1,25 @@
 #!/bin/sh
 
+# 서비스 이름
+SERVICE="storagepanel"
+BIN_PATH="/var/packages/${SERVICE}/target/bin/storagepanel.sh"
+
 case "$1" in
-  start)
-    nohup /var/packages/Changepanelsize/target/bin/change_panel_size.py >> /var/log/Changepanelsize/python.log 2>&1 &
-    ;;
-  stop)
-    pkill -f change_panel_size.py
-    ;;
-  status)
-    pgrep -f change_panel_size.py >/dev/null
-    ;;
+    start)
+        echo "Starting $SERVICE..."
+        ${BIN_PATH} start
+        ;;
+    stop)
+        echo "Stopping $SERVICE..."
+        ${BIN_PATH} stop
+        ;;
+    status)
+        ${BIN_PATH} status
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|status}"
+        exit 1
+        ;;
 esac
+
 exit 0

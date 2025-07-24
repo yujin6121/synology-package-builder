@@ -1,0 +1,12 @@
+{
+    "defaults": {
+        "run-as": "package"
+    },
+    "username": "StoragePanelManager",
+    "ctrl-script": [
+        "system"
+    ],
+    "join-services": {
+        "system": "join"
+    }
+}
