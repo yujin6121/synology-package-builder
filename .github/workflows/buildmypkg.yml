@@ -24,7 +24,7 @@ jobs:
               with:
                   dsm: ${{ matrix.dsm }}
                   arch: ${{ matrix.arch }}
-                  projects: Changepanelsize:./ChangePanelSize
+                  projects: Changepanelsize:./spk/Changepanelsize
                   output: ./dist
             - name: Upload Package
               uses: actions/upload-artifact@v4
